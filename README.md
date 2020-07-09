@@ -91,7 +91,9 @@ app.UseAuthentication();
 ```
 &nbsp;
 #### API Key
-I dette simple eksempel er API Key hardcoded og placeret i maskinens **User Secret**. Højre klik på projektets navn og vælg *User Secret*. Ret `secrets.json` til:
+I dette simple eksempel er API Key hardcoded og placeret i maskinens **User Secret**. Læs evt. mere her: [Safe storage of app secrets in development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=windows)
+
+Højre klik på projektets navn og vælg *User Secret*. Ret `secrets.json` til:
 ```json
 {
   "Authentication": 
