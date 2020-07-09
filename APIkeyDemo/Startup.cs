@@ -21,11 +21,11 @@ namespace APIkeyDemo
             services.AddControllers();
 
             #region API key
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = ApiKeyAuthOptions.DefaultScheme;
-                options.DefaultChallengeScheme = ApiKeyAuthOptions.DefaultScheme;
-            }).AddApiKeyAuth(Configuration.GetSection("Authentication").Bind);
+        services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = ApiKeyAuthOptions.DefaultScheme;
+            options.DefaultChallengeScheme = ApiKeyAuthOptions.DefaultScheme;
+        }).AddApiKeyAuth(Configuration.GetSection("Authentication").Bind);
             #endregion
         }
 
