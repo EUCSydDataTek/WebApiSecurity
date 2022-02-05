@@ -110,6 +110,12 @@ I demo-projektet beskyttes GET-metoden WeatherForecastController:
 ```
 
 &nbsp;
+
+## Test i browser
+
+Skriv: https://localhost:44383/weatherforecast?apikey=12345
+
+&nbsp;
 ## Test i Postman
 Opsæt en GET request: https://localhost:44383/weatherforecast
 
