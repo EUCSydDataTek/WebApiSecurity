@@ -1,18 +1,11 @@
-﻿using System;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 
-namespace APIkeyDemo.Authentication
+namespace APIkeyDemo.Authentication;
+
+public static class AuthenticationBuilderExtensions
 {
-    public static class AuthenticationBuilderExtensions
+    public static AuthenticationBuilder AddApiKeyAuth(this AuthenticationBuilder builder, Action<ApiKeyAuthOptions> configureOptions)
     {
-        public static AuthenticationBuilder AddApiKeyAuth(
-            this AuthenticationBuilder builder,
-            Action<ApiKeyAuthOptions> configureOptions)
-        {
-            return builder
-                .AddScheme<ApiKeyAuthOptions, ApiKeyAuthHandler>(
-                    ApiKeyAuthOptions.DefaultScheme,
-                    configureOptions);
-        }
+        return builder.AddScheme<ApiKeyAuthOptions, ApiKeyAuthHandler>(ApiKeyAuthOptions.DefaultScheme, configureOptions);
     }
 }

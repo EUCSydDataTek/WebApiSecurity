@@ -2,8 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>NET6.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>bf7d3513-ada8-43ca-bee5-5c131d74c284</UserSecretsId>
   </PropertyGroup>
 
-
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+	</ItemGroup>
+	
 </Project>
